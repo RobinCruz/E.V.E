@@ -22,7 +22,7 @@ for root,dirs,files in os.walk(img_dir):
                 label_ids[label]=curr_id
                 curr_id+=1
                 #label_ids[label]= file
-            ID = curr_id
+            ID = curr_id-1
             pil_image = Image.open(path).convert("L") #grayscale
             img_array = np.array(pil_image,"uint8")
             faces = face_cascade.detectMultiScale(img_array, scaleFactor=2.5, minNeighbors=5)
