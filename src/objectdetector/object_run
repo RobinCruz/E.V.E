@@ -1,0 +1,7 @@
+import ob_processor
+import cv2
+
+delp =cv2.imread("img.jpg")
+img = ob_processor.sese(delp)
+#cv2.imshow("Image", img)
+print(img)
